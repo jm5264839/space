@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<head>
+   
+
+<style>
+
+
+
+.dreptunghi {
+  width: 700px;
+  height: 80px;
+  background-color: #204b7ca6;
+  padding: 50px;
+  margin: auto;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+
+
+	@media only screen and (max-width: 600px) {
+  /* Mobile-specific styles go here */
+.content h2 {
+    font-size: 16px;
+  }
+
+  .box,
+  .box2 {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .background-img {
+    height: 300px;
+    width: 90%;
+    margin: 10% auto;
+  }
+
+  .box,
+  .box2 {
+    width: 250px;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }  
+    
+}
+
+body {
+   background: #204b7ca6;
+  overflow-x: hidden;
+}
+ 
+ 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-1: Oswald, sans-serif;
+  --font-2: Arimo, sans-serif;
+}
+:before,
+:after {
+  content: "";
+  position: absolute;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+span {
+  display: inline-block;
+}
+#main,
+.app {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+  font-family: var(--font-1);
+  color: #fff;
+  overflow-x: hidden;
+}
+.app {
+  border-top: solid 30px #252525;
+}
+.container {
+  width: 940px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+.header {
+  height: 270px;
+  position: relative;
+}
+
+
+.content {
+  width: 940px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+.header h1 {
+  text-align: center;
+  margin-top: 80px;
+  display: inline-block;
+  width: 100%;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
+.txt {
+  width: 140px;
+  height: 36px;
+  background: #212121;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 36px;
+  color: D9D9D9;
+  margin-left: calc(50% - 70px);
+}
+.bottom {
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.bottom .container {
+  display: flex;
+}
+
+
+.navigator {
+  width: 800px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 140px;
+  padding-top: 10px;
+}
+.btn-nav {
+  position: relative;
+  height: 60px;
+  color: #fff;
+}
+.btn-nav:after {
+  width: 100%;
+  height: 2px;
+  background: #204b7ca6;
+  left: 0;
+  bottom: 0;
+}
+.btn-nav span {
+  font-size: 0.9rem;
+}
+.btn-nav p {
+  font-size: 0.8rem;
+  color: #d9d9d9;
+}
+
+
+.footer {
+  width: 100%;
+  height: 30px;
+  background: #204b7ca6;
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-top: 40px;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+nav,
+.navbar {
+  height: 100%;
+  width: 100%;
+  float: left;
+  padding: 20px;
+  background: #204b7ca6;
+  color: #34495e;
+  font-family: "Poppins", sans-serif;
+}
+.navbar .nav-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.navbar .nav-header {
+  float: left;
+  padding: 10px 0;
+}
+.navbar .logo {
+  width: 100%;
+  max-width: 140px;
+}
+.navbar .logo a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+}
+.navbar .logo img {
+  max-width: 100%;
+}
+.navbar .nav-links {
+  margin: 0;
+  float: right;
+}
+.navbar .nav-links .nav-item {
+  position: relative;
+  list-style: none;
+  float: left;
+}
+.navbar .nav-links .nav-item .nav-link {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.navbar .menu-show,
+.menu-hide {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.navbar .menu-show {
+  margin: 0;
+  float: right;
+}
+.navbar .nav-link:hover,
+.menu-show:hover,
+.menu-hide:hover {
+  color: gray;
+}
+.navbar #menu-toggle {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .navbar .has-dropdown ul {
+    position: absolute;
+    left: inherit;
+    top: 100%;
+    width: 270px;
+    padding: 0;
+    border: unset;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    -moz-transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+      -2px 0 5px 1px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+      -2px 0 5px 1px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+      -2px 0 5px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+      -2px 0 5px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+      -2px 0 5px 1px rgba(0, 0, 0, 0.05);
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .navbar .has-dropdown:hover ul {
+    visibility: visible;
+    opacity: 1;
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    display: block !important;
+  }
+  .navbar .has-dropdown ul li {
+    width: 100%;
+    position: relative;
+    display: block;
+    line-height: 24px;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #222;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+    text-align: left;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+  }
+  .navbar .has-dropdown ul li a {
+    position: relative;
+    display: block;
+    padding: 15px 30px !important;
+    line-height: 24px;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #6e0009 !important;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+    text-align: left;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+  }
+  .navbar .has-dropdown ul li a:hover {
+    background: #204b7ca6;
+    color: #fff !important;
+  }
+}
+@media (max-width: 767px) {
+  .navbar .menu-show,
+  .menu-hide {
+    display: block;
+  }
+  .navbar .nav-links {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    padding: 50px 0;
+    transition: 1s;
+    background: #204b7ca6;
+  }
+  .navbar .nav-links .nav-item {
+    width: 100%;
+  }
+  .navbar .nav-links .nav-item .nav-link {
+    padding: 15px;
+    text-align: center;
+  }
+  .navbar .menu-hide {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+  .navbar #menu-toggle:checked ~ .nav .nav-links {
+    left: 0;
+  }
+  .navbar .has-dropdown ul {
+    display: none;
+  }
+  .navbar .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #0000001c;
+    flex-direction: column;
+  }
+  .navbar .dropdown-menu li:not(:last-child) {
+    border-bottom: 1px solid #0000001c;
+  }
+  .navbar .nav-links .has-dropdown .dropdown-menu .nav-link {
+    font-size: 13px;
+  }
+}
+
+
+
+	
+</style>
+
+
+ </head>
+	
+
+
+      
+<!-- menu. -->
+ 
+	<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-header">
+      <div class="logo">
+        <!-- Logo -->
+      
+	  
+         
+      </div>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>
+
+    				  
+	      
+        <label for="menu-toggle" class="menu-hide"><i class="fa fa-times"></i></label>
+      </ul>
+    </div>
+  </div>
+</nav>	  
+		  
+<!-- body . -->
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+ 
+
+
+
+
+
+	  
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="1">
+        <div class="my-auto">
+		
+
+</tr> 	   
+	   
+
+
+</tbody></table>
+	
+
+
+
+<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">GIF NEW </h2>  	
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+	
+
+ <tbody><tr>
+	
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-177</b></font> <img src="https://i.imgur.com/dZQnwtU.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-178</b></font> <img src="https://i.imgur.com/AMyyCSf.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-179</b></font> <img src="https://i.imgur.com/VVyY38M.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-180</b></font> <img src="https://imgur.com/wUtiiIk.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-181</b></font> <img src="https://imgur.com/j8u7lWy.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-182</b></font> <img src="https://imgur.com/llgcU0N.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-183</b></font> <img src="https://imgur.com/lsaUfLI.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-185</b></font> <img src="https://imgur.com/L08CEP9.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-187</b></font> <img src="https://imgur.com/SZEfxIy.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-188</b></font> <img src="https://imgur.com/HOtw9Ah.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>	
+</tr> 	   
+	   
+<tr> 
+	
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-195</b></font> <img src="https://imgur.com/MK91ck1.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-196</b></font> <img src="https://imgur.com/z818HLS.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-197</b></font> <img src="https://imgur.com/YvDmsGz.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-198</b></font> <img src="https://imgur.com/V4MLnoG.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-199</b></font> <img src="https://imgur.com/DZc7Tpo.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-200</b></font> <img src="https://imgur.com/D4MVV9k.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-201</b></font> <img src="https://imgur.com/mPumyUk.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-202</b></font> <img src="https://imgur.com/unkMq6B.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-203</b></font> <img src="https://imgur.com/1nmwqc7.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-205</b></font> <img src="https://imgur.com/AoS8pRn.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+</tr>
+
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-206</b></font> <img src="https://imgur.com/eidBDp0.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-207</b></font> <img src="https://imgur.com/iFI3xmL.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-208</b></font> <img src="https://imgur.com/ZhHtct2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-209</b></font> <img src="https://imgur.com/YiAhKO2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-210</b></font> <img src="https://imgur.com/zL6qNwU.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-211</b></font> <img src="https://imgur.com/5PY90zT.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-217</b></font> <img src="https://imgur.com/tA8u70I.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-223</b></font> <img src="https://imgur.com/AMUeCsP.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-224</b></font> <img src="https://imgur.com/yZNDGze.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-226</b></font> <img src="https://imgur.com/yssgMVE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+	   
+</tr> 
+
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-227</b></font> <img src="https://imgur.com/iQqYtrN.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-228</b></font> <img src="https://imgur.com/7Mosq2l.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-229</b></font> <img src="https://imgur.com/RL79oh1.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-230</b></font> <img src="https://imgur.com/xgu3S4U.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-231</b></font> <img src="https://imgur.com/ft4VjG6.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-232</b></font> <img src="https://imgur.com/Kavcnd4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-233</b></font> <img src="https://imgur.com/ocrscRk.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-234</b></font> <img src="https://imgur.com/qLWnS4m.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-235</b></font> <img src="https://imgur.com/M8XBFIq.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-236</b></font> <img src="https://imgur.com/Dm1LV8Q.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+	 
+</tr> 
+
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-237</b></font> <img src="https://imgur.com/fUUqnSE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-238</b></font> <img src="https://imgur.com/3FLoat0.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-239</b></font> <img src="https://imgur.com/Dhm9nBj.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-240</b></font> <img src="https://imgur.com/keaHdZI.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-241</b></font> <img src="https://imgur.com/htFOoEQ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-242</b></font> <img src="https://imgur.com/fw7iX4C.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-243</b></font> <img src="https://imgur.com/J15caSL.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-244</b></font> <img src="https://imgur.com/pOiRsX7.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-245</b></font> <img src="https://imgur.com/ux5upz4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-246</b></font> <img src="https://imgur.com/OCV8Xz6.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+	 
+</tr> 
+
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>GIF-247</b></font> <img src="https://imgur.com/MgtYR6J.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+	 
+</tr> 	   
+	   
+
+
+</tbody></table>
+	
+
+
+
+<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">MODELS K AFTER</h2>  	
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+	
+
+ <tbody><tr>
+   
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-11</b></font> <img src="https://imgur.com/WJwQmA0.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-18</b></font> <img src="https://imgur.com/tql1AhV.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-92</b></font> <img src="" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-100</b></font> <img src="" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-129</b></font> <img src="https://imgur.com/YgtK2w7.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-130</b></font> <img src="https://imgur.com/fnibPWN.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-131</b></font> <img src="https://imgur.com/krIOd6y.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-133</b></font> <img src="https://imgur.com/jmJyB3H.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-178</b></font> <img src="" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-182</b></font> <img src="https://imgur.com/tS1xGCu.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>   
+	 
+        </tr> 
+
+<tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-183</b></font> <img src="https://imgur.com/lLLUEpG.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-188</b></font> <img src="https://imgur.com/TW8pRDg.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-194</b></font> <img src="https://imgur.com/yRZD8yw.gif"style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-195</b></font> <img src="https://imgur.com/bYGRGus.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-196</b></font> <img src="https://imgur.com/T9WrwIi.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-197</b></font> <img src="https://imgur.com/pgPlJKp.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-206</b></font> <img src="https://imgur.com/py731cO.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-207</b></font> <img src="https://imgur.com/jAdRQ46.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-209</b></font> <img src="https://imgur.com/c90autP.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-211</b></font> <img src="https://imgur.com/JRONFLT.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+	</tr> 
+
+<tr>  
+
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-212</b></font> <img src="https://imgur.com/iF1vqJl.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-213</b></font> <img src="https://imgur.com/IlJe71I.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-214</b></font> <img src="https://imgur.com/j31IJ4a.gif"style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-215</b></font> <img src="https://imgur.com/lrNgjkZ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-217</b></font> <img src="https://imgur.com/xKh3CBB.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-K-218</b></font> <img src="https://imgur.com/oaSDhKO.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+</tr> 	   
+	   
+
+
+</tbody></table>
+	
+
+
+
+<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">MODELS SENZA</h2>  	
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+	
+
+ <tbody><tr>	
+
+
+
+
+
+           </tr>
+
+ </tr> 
+
+<tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>SENZA-4</b></font> <img src="https://i.postimg.cc/XN9FYgZg/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>SENZA-6</b></font> <img src="https://i.postimg.cc/3JgFhBHP/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>SENZA-8</b></font> <img src="https://i.postimg.cc/WbxsqxBg/anigif.gif"style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>SENZA-9</b></font> <img src="https://i.postimg.cc/pdRbDvqh/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>SENZA-66</b></font> <img src="https://i.postimg.cc/dVs2q4w1/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+
+	</tr> 
+
+<tr>  
+
+
+</tr> 	   
+	   
+
+
+</tbody></table>
+	
+
+
+
+<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">MODELS P AFTER</h2>  	
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+	
+
+ <tbody><tr>	
+
+
+
+
+
+           </tr>
+
+ </tr> 
+
+<tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-1</b></font> <img src="https://i.imgur.com/M3bq7ka.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-16</b></font> <img src="https://i.imgur.com/m3UyjVL.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-50</b></font> <img src="https://xatimg.com/image/uvg2oR3i36sp.gif"style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-51</b></font> <img src="https://xatimg.com/image/J3N7o4m0kjHB.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-52</b></font> <img src="https://xatimg.com/image/RH6761za6C4S.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-53</b></font> <img src="https://i.imgur.com/CrNkowY.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-54</b></font> <img src="https://xatimg.com/image/uvuH8bYWnBej.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-55</b></font> <img src="https://xatimg.com/image/pWNp3SyTVQ1n.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-56</b></font> <img src="https://xatimg.com/image/2UgyW22giD1v.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-57</b></font> <img src="https://xatimg.com/image/0gX9BN1rhJT7.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+	</tr> 
+
+<tr> 
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-58</b></font> <img src="https://xatimg.com/image/CGZhcCbpkmYh.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-61</b></font> <img src="https://xatimg.com/image/nZlwlPyAOuQY.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-63</b></font> <img src="https://xatimg.com/image/9yrKLd0xVhSj.gif"style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-64</b></font> <img src="https://xatimg.com/image/aZxaiHbqxCNt.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-65</b></font> <img src="https://xatimg.com/image/Nt3ifa3t1Lor.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-66</b></font> <img src="https://xatimg.com/image/7lCpU7uJ4yqY.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-70</b></font> <img src="https://xatimg.com/image/T47fufN09MWm.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-85</b></font> <img src="https://xatimg.com/image/CpZwnQaCJ4sM.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-86</b></font> <img src="https://xatimg.com/image/2NOaeLsSgi0F.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-87</b></font> <img src="https://xatimg.com/image/10WIjohVFIei.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+	</tr> 
+
+<tr> 	
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-88</b></font> <img src="https://xatimg.com/image/rLjX6OnYrcwn.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-89</b></font> <img src="https://xatimg.com/image/XmdY0LZq0CuO.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-97</b></font> <img src="https://i.imgur.com/IhF9QAX.gif"style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-104</b></font> <img src="https://xatimg.com/image/zZEuIiJz9IUp.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-105</b></font> <img src="https://xatimg.com/image/S01BBVNUjvP8.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTP-P-107</b></font> <img src="https://i.imgur.com/CkaSTmx.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-108</b></font> <img src="https://xatimg.com/image/ZBzgCkPv6xHh.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-109</b></font> <img src="https://xatimg.com/image/9ITWzoGnrAUG.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-115</b></font> <img src="https://xatimg.com/image/lDPys0BunVTr.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-116</b></font> <img src="https://xatimg.com/image/vWFmwOwxo8zK.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+	</tr> 
+
+<tr> 	
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-119</b></font> <img src="https://xatimg.com/image/JGnghKty7pM2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-120</b></font> <img src="https://xatimg.com/image/pTlV3AdS7aIG.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-121</b></font> <img src="https://xatimg.com/image/4AlkQAJFwNnS.gif"style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-122</b></font> <img src="https://xatimg.com/image/5wFVxpqSXpdC.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-125</b></font> <img src="https://xatimg.com/image/vLcFQo4tCFzp.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-129</b></font> <img src="https://xatimg.com/image/L2MnYPMeflrq.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-130</b></font> <img src="https://xatimg.com/image/Uschi9vaknk4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-141</b></font> <img src="https://xatimg.com/image/bt3dYyL5sFIw.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-148</b></font> <img src="https://xatimg.com/image/N3mSwdgvhqoM.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-149</b></font> <img src="https://xatimg.com/image/RfLAuWnUXhYL.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+	</tr> 
+
+<tr> 
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-153</b></font> <img src="https://xatimg.com/image/LnoJKLRCRYUw.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-157</b></font> <img src="https://xatimg.com/image/Yz30h3mX3fj2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-159</b></font> <img src="https://xatimg.com/image/0dqF8N35ds1n.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-160</b></font> <img src="https://xatimg.com/image/NP3VERPySNgn.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-163</b></font> <img src="https://xatimg.com/image/vn1hERVjYsMy.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-164</b></font> <img src="https://xatimg.com/image/fAHiKE2NdKn6.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-165</b></font> <img src="https://xatimg.com/image/HJO2nbkBaRx4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-166</b></font> <img src="https://xatimg.com/image/eyUbVXCldSKf.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-167</b></font> <img src="https://xatimg.com/image/MqY2gA6U7Ia0.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-169</b></font> <img src="https://xatimg.com/image/6arsPcxce7k4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-171</b></font> <img src="https://xatimg.com/image/cvn2HezgrKsv.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-172</b></font> <img src="https://xatimg.com/image/0YFy5RJg1KFO.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-173</b></font> <img src="https://xatimg.com/image/nqxo5TAk1SDc.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-174</b></font> <img src="https://xatimg.com/image/OOTcAiJUP2Uc.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-177</b></font> <img src="https://xatimg.com/image/qCo3wtXc3X3n.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-183</b></font> <img src="https://xatimg.com/image/T33SOQsPVRTr.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-184</b></font> <img src="https://xatimg.com/image/D9aNKc5sC4y4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-185</b></font> <img src="https://xatimg.com/image/PAmFZRSVnf43.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-188</b></font> <img src="https://xatimg.com/image/onLmLLXJx7He.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-190</b></font> <img src="https://xatimg.com/image/qrXBL7SPhXvN.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-206</b></font> <img src="https://xatimg.com/image/9NIAl4BBMYIR.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-212</b></font> <img src="https://xatimg.com/image/QlHsBdRWEUBX.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-226</b></font> <img src="https://xatimg.com/image/6tIwPnbsOLX1.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-228</b></font> <img src="https://xatimg.com/image/iTAyTVrfZpTP.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-280</b></font> <img src="https://xatimg.com/image/KoW6SeAqLFcf.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-358</b></font> <img src="https://xatimg.com/image/1QJ9V4jDRzHb.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-380</b></font> <img src="https://xatimg.com/image/4g33g8AJRtDr.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-436</b></font> <img src="https://xatimg.com/image/mweUuPVx0zg9.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-437</b></font> <img src="https://xatimg.com/image/WD3dcFGv1iIM.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-443</b></font> <img src="https://xatimg.com/image/QoTPGmC6yWs6.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-497</b></font> <img src="https://imgur.com/E0LD6zI.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-498</b></font> <img src="https://imgur.com/Ewh8bkr.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-499</b></font> <img src="https://imgur.com/WWyCWyE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-500</b></font> <img src="https://imgur.com/iRa5rsy.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-501</b></font> <img src="https://imgur.com/mlbDRdD.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-503</b></font> <img src="https://imgur.com/dnby1qZ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-504</b></font> <img src="https://i.postimg.cc/YS5xF88r/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-505</b></font> <img src="https://i.postimg.cc/pd65w68R/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-508</b></font> <img src="https://xatimg.com/image/7SHVpF26vbfM.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-509</b></font> <img src="https://imgur.com/Ibj4Wz7.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-510</b></font> <img src="https://imgur.com/OaJq0YJ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-511</b></font> <img src="https://imgur.com/zFmW1ju.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-512</b></font> <img src="https://imgur.com/6UoJqYm.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-513</b></font> <img src="https://imgur.com/kXbNKl3.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-514</b></font> <img src="https://imgur.com/UPJxnbD.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-515</b></font> <img src="https://imgur.com/2TMd2ne.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-516</b></font> <img src="https://imgur.com/EbYi6Uf.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-517</b></font> <img src="https://imgur.com/JyrTYUB.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-518</b></font> <img src="https://imgur.com/57BK8ge.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>	 
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-520</b></font> <img src="https://imgur.com/yhMtmx2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-521</b></font> <img src="https://imgur.com/Nl1uZG9.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-522</b></font> <img src="https://imgur.com/AJystPQ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-523</b></font> <img src="https://imgur.com/AJystPQ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-524</b></font> <img src="https://imgur.com/WLxggpQ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-525</b></font> <img src="https://imgur.com/uL7YCWU.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-526</b></font> <img src="https://imgur.com/jH1VPVc.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-527</b></font> <img src="https://imgur.com/S5W76LQ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-528</b></font> <img src="https://imgur.com/fVGOie6.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-529</b></font> <img src="https://imgur.com/ykoQPiO.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>	 
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-530</b></font> <img src="https://imgur.com/3F12ZVJ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-531</b></font> <img src="https://imgur.com/YckAJ2m.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-532</b></font> <img src="https://imgur.com/9ZgVMKE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-533</b></font> <img src="https://imgur.com/4gHsFs7.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-534</b></font> <img src="https://imgur.com/R9xzelT.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-535</b></font> <img src="https://imgur.com/c1asCZT.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFT-P-536</b></font> <img src="https://imgur.com/RMjxEr5.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BE</b></font> <img src="https://imgur.com/GyqvQxU.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>	 
+	 
+</tbody></table>
+	
+
+
+	
+
+
+
+<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">MODELS AFTER</h2>  	
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+	
+
+ <tbody><tr>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-9</b></font> <img src="https://xatimg.com/image/rUI1Eyic6RvE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-10</b></font> <img src="https://xatimg.com/image/C0mCczBt9dVE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-11</b></font> <img src="https://xatimg.com/image/fECqz1RjntH8.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-157</b></font> <img src="https://xatimg.com/image/Yz30h3mX3fj2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-163</b></font> <img src="https://xatimg.com/image/vn1hERVjYsMy.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-164</b></font> <img src="https://xatimg.com/image/fAHiKE2NdKn6.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-165</b></font> <img src="https://xatimg.com/image/HJO2nbkBaRx4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-169</b></font> <img src="https://xatimg.com/image/6arsPcxce7k4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-173</b></font> <img src="https://xatimg.com/image/nqxo5TAk1SDc.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-174</b></font> <img src="https://xatimg.com/image/OOTcAiJUP2Uc.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>
+ 
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-183</b></font> <img src="https://xatimg.com/image/T33SOQsPVRTr.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-188</b></font> <img src="https://xatimg.com/image/mMUQST9Y3pMq.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-190</b></font> <img src="https://xatimg.com/image/UQYKLQWIlKH5.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-191</b></font> <img src="https://xatimg.com/image/MBu7sK29is7f.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-192</b></font> <img src="https://xatimg.com/image/iRGMOkRlgjw7.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-193</b></font> <img src="https://xatimg.com/image/zSPp2IGzzg4W.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-195</b></font> <img src="https://xatimg.com/image/nygNobQAFiVR.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-196</b></font> <img src="https://xatimg.com/image/xjIX7VbCRvHU.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-198</b></font> <img src="https://xatimg.com/image/Fx70oBsRiN7y.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-199</b></font> <img src="https://xatimg.com/image/Y4qiKHqINZTL.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ </tr>
+
+	 </tr>
+
+
+ <tr>
+ 
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-200</b></font> <img src="https://xatimg.com/image/KSpCGmIg2Rkg.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-201</b></font> <img src="https://xatimg.com/image/DMxz7dVcsSU4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-203</b></font> <img src="https://xatimg.com/image/XqlLehZYCLeu.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-207</b></font> <img src="https://xatimg.com/image/7GF3LRX81g0G.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-208</b></font> <img src="https://xatimg.com/image/tGeYuP8FvW1l.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-209</b></font> <img src="https://xatimg.com/image/D1Sun9naFtos.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-210</b></font> <img src="https://xatimg.com/image/z1vNPT8iEti5.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-211</b></font> <img src="https://xatimg.com/image/jEv7d2vGvWM4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-213</b></font> <img src="https://xatimg.com/image/qmRVaVwxwNfx.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-215</b></font> <img src="https://xatimg.com/image/hbVjANatDTBN.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ </tr>
+
+	  </tr>
+
+
+ 
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-217</b></font> <img src="https://xatimg.com/image/ebIqFxK2wbZ6.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-218</b></font> <img src="https://xatimg.com/image/EmeIjhIxvrd4.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-219</b></font> <img src="https://xatimg.com/image/P5rQHPwXHxiF.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-224</b></font> <img src="https://xatimg.com/image/glCFBabu4Wcr.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-226</b></font> <img src="https://xatimg.com/image/WLTdlNlHdP97.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-227</b></font> <img src="https://xatimg.com/image/U7n0sjdH7kHj.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-228</b></font> <img src="https://xatimg.com/image/zFQRN9ALCErq.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-231</b></font> <img src="https://xatimg.com/image/GhBriQ09hboJ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-233</b></font> <img src="https://xatimg.com/image/lpCv92eTUbBg.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-235</b></font> <img src="https://xatimg.com/image/dEuSHHDEKb8k.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ </tr>
+
+	  </tr>
+
+
+ 
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-236</b></font> <img src="https://xatimg.com/image/oTtFEn3THGZC.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-237</b></font> <img src="https://xatimg.com/image/ely1jeUCCD6I.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-243</b></font> <img src="https://xatimg.com/image/wG9Nzqx7dceB.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-244</b></font> <img src="https://xatimg.com/image/lusZ2oSFJQGs.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-245</b></font> <img src="https://xatimg.com/image/pfcGpwCIRi3F.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-249</b></font> <img src="https://xatimg.com/image/Ys2a0NhPBs4P.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-251</b></font> <img src="https://xatimg.com/image/XBzFsDhfXimL.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-252</b></font> <img src="https://xatimg.com/image/cg6uSDdcSAAI.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-253</b></font> <img src="https://xatimg.com/image/ndmhKCVu1Qro.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-254</b></font> <img src="https://xatimg.com/image/fg4jLXG7Z4Ne.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ </tr>
+
+	  </tr>
+
+
+ 
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-255</b></font> <img src="https://xatimg.com/image/04YVVvlP8aQK.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-256</b></font> <img src="https://xatimg.com/image/jPyvBZUdbrj1.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-257</b></font> <img src="https://xatimg.com/image/UiDvrQ1CJ0mW.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-259</b></font> <img src="https://xatimg.com/image/xk3scesr27Ns.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-262</b></font> <img src="https://xatimg.com/image/chVJiODAnMMP.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-268</b></font> <img src="https://xatimg.com/image/oCKXxTBGCCl5.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-279</b></font> <img src="https://xatimg.com/image/r1ohN3enYwZt.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-292</b></font> <img src="https://xatimg.com/image/7G09pwhKgNFh.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-293</b></font> <img src="https://xatimg.com/image/ePjnJLevx8HF.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-294</b></font> <img src="https://xatimg.com/image/kyBkPcAHvYHc.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ </tr>
+
+	  </tr>
+
+
+ 
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-295</b></font> <img src="https://xatimg.com/image/qxLBEFN5Lbmr.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-296</b></font> <img src="https://xatimg.com/image/CDIreWi0gEka.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-298</b></font> <img src="https://xatimg.com/image/F6ifxFMQhZSO.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-301</b></font> <img src="https://xatimg.com/image/IfgOz9YyLVPG.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-302</b></font> <img src="https://xatimg.com/image/BUXcPcMwXVNc.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-303</b></font> <img src="https://xatimg.com/image/cGoDxWFuRqTA.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-369</b></font> <img src="https://xatimg.com/image/8chQXMluGWEO.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-370</b></font> <img src="https://xatimg.com/image/fjwhNprNi2MF.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>AFTER-389</b></font> <img src="https://xatimg.com/image/u7qjaPvHoLKs.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ </tr>
+
+	  </tr>
+
+
+
+ 
+</tbody></table>
+
+</div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="2">
+        <div class="my-auto">
+	
+<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">MODELS BT NOME </h2>  	
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+	
+
+ <tbody><tr>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-P-05</b></font> <img src="https://i.imgur.com/7dxLJcX.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-10</b></font> <img src="https://imgur.com/HUgfCae.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-E-15</b></font> <img src="https://i.imgur.com/lQvsfJG.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>32</b></font> <img src="https://imgur.com/b9PsUqm.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-43</b></font> <img src="https://imgur.com/fExp5vF.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-80</b></font> <img src="https://xatimg.com/image/e55gKKymQJLv.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-82</b></font> <img src="https://xatimg.com/image/TSMeX1Df7a7b.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-105</b></font> <img src="https://imgur.com/vsDZ0AE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-138</b></font> <img src="https://xatimg.com/image/QRkEG4dd6pu7.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-B-317</b></font> <img src="https://imgur.com/UUfZQhJ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+    </tr>
+
+
+ <tr>
+ 
+	 
+	 
+</tbody></table>
+
+</div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="2">
+        <div class="my-auto">
+	
+<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">MODELS BT NOME PHOTO</h2>  	
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+	
+
+ <tbody><tr>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-M-01</b></font> <img src="https://imgur.com/wFFM7Ow.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-M-02</b></font> <img src="https://imgur.com/46J8f1B.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-E-21</b></font> <img src="https://xatimg.com/image/Z0sVggwMZAIm.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-E-34</b></font> <img src="https://xatimg.com/image/wTAwtCTIWCkB.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-E-35</b></font> <img src="https://xatimg.com/image/JwGGe6uNrEKC.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-E-38</b></font> <img src="https://xatimg.com/image/NAbtkHEmcpDw.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-E-39</b></font> <img src="https://xatimg.com/image/WC2GN4XhGtFQ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-70</b></font> <img src="https://xatimg.com/image/OOsxOv9KV2sq.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-78</b></font> <img src="https://xatimg.com/image/DkUsnFn5bOrn.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-105</b></font> <img src="https://xatimg.com/image/hMNKJQ9Z45Ve.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+ </tr>
+<tr>
+ 
+
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-106</b></font> <img src="https://xatimg.com/image/lQmIMjoQyozk.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-107</b></font> <img src="https://xatimg.com/image/LEhSzO9tHdng.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-121</b></font> <img src="https://xatimg.com/image/pbeXcMEDg5DE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-122</b></font> <img src="https://xatimg.com/image/Y5q09mxFWhM0.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-123</b></font> <img src="https://xatimg.com/image/YufmnTsgmWle.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-124</b></font> <img src="https://xatimg.com/image/rD66rHjj7CeI.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-126</b></font> <img src="https://xatimg.com/image/WYmWGEYibWaO.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-129</b></font> <img src="https://xatimg.com/image/foBudUp0Gv6L.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-130</b></font> <img src="https://xatimg.com/image/Qxq0DmSt9DCA.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-131</b></font> <img src="https://xatimg.com/image/193VJ19ech3i.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+</tr>
+
+<tr> 
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-132</b></font> <img src="https://xatimg.com/image/shZNw59z6Iob.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-137</b></font> <img src="https://xatimg.com/image/boTY7my2weaJ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-139</b></font> <img src="https://xatimg.com/image/AvIdInK3NMze.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-151</b></font> <img src="https://xatimg.com/image/pzGMHPxiKOSa.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-153</b></font> <img src="https://xatimg.com/image/17orhLzJZknK.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-159</b></font> <img src="https://xatimg.com/image/aqXZO9tLnQem.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-160</b></font> <img src="https://xatimg.com/image/rnHZGXFtzH93.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-185</b></font> <img src="https://xatimg.com/image/PFnnOCUKO2k0.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-198</b></font> <img src="https://xatimg.com/image/FuhNGLYY0ItH.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-199</b></font> <img src="https://xatimg.com/image/etaFWzRGAvuP.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+</tr>
+
+<tr> 
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-202</b></font> <img src="https://xatimg.com/image/RH5n9jt98xx1.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-205</b></font> <img src="https://xatimg.com/image/j0FIWJ1A4To8.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-224</b></font> <img src="https://xatimg.com/image/DC2oyvjO4xMr.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT-247</b></font> <img src="https://xatimg.com/image/VOr4FmOltvtM.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+
+
+
+	
+</tr>	 
+	 
+
+</tbody></table>
+<p></p><p><br></p><p><br></p>
+
+	
+        </div>
+      </section>
+	
+	
+
+      
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="5">
+        <div class="my-auto">
+      
+	<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">GIF HALLOWEEN</h2>								 
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+   <tbody>
+	   <tr>
+      
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-02</b></font> <img src="https://i.postimg.cc/s2StVLj2/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-03</b></font> <img src="https://i.postimg.cc/MpBsRjhP/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-04</b></font> <img src="https://imgur.com/u5CmSkG.gif"style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-06</b></font> <img src="https://imgur.com/Z1anPkh.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-07</b></font> <img src="https://imgur.com/9UEmwaU.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-10</b></font> <img src="https://imgur.com/CTbHKV2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-11</b></font> <img src="https://imgur.com/N19Ckbm.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-12</b></font> <img src="https://imgur.com/ZjvG4Dt.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-13</b></font> <img src="https://imgur.com/D7cHWCi.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-14</b></font> <img src="https://imgur.com/s6vcoxA.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+</tr> 
+  <tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-382</b></font> <img src="https://i.postimg.cc/wBGSJ1XD/anigif.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>   
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>HALLO-384</b></font> <img src="https://i.postimg.cc/tg2cbYSL/tONcqst.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+
+      
+      </tr>   
+    </tbody>
+   </table>
+	
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="6">
+        <div class="my-auto">
+      
+	<h2 style="text-align:center; font-size:160%; color:white; class="mb-5">GIF CHRISTMAS</h2>
+          
+	</tbody></table>
+	
+ 
+
+<table cellpadding="0" cellspacing="0" width="100%" > 
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+   <tbody><tr>
+
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-1</b></font> <img src="https://imgur.com/CT1g2j2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>   <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-2</b></font> <img src="https://imgur.com/JFcu301.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-3</b></font> <img src="https://imgur.com/vJ8zfIG.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9;border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-4</b></font> <img src="https://imgur.com/ROz7s0D.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-5</b></font> <img src="https://imgur.com/j6S5bkc.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-7</b></font> <img src="https://imgur.com/IZy9xLI.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-8</b></font> <img src="https://imgur.com/efQ9aWV.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-GIF-8</b></font> <img src="https://imgur.com/Ko83wvQ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-GIF-9</b></font> <img src="https://imgur.com/lwdNyMV.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-GIF-11</b></font> <img src="https://imgur.com/f5IaRbn.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+   
+  </tr> 
+   <tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height:120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-GIF-15</b></font> <img src="https://imgur.com/BILLDT5.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-GIF-16</b></font> <img src="https://imgur.com/QckvOSx.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+ <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-393</b></font> <img src="https://imgur.com/n4xXu9Z.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-394</b></font> <img src="https://imgur.com/Beelg1A.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>  
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-400</b></font> <img src="https://imgur.com/5ZZUYuM.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-401</b></font> <img src="https://imgur.com/pjhLEmh.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+  <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align:center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-402</b></font> <img src="https://imgur.com/m4lcAPQ.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+   <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align:center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-403</b></font> <img src="https://imgur.com/xtg3KEE.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+   <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-404</b></font> <img src="https://imgur.com/iSbm6K2.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+    <td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-405</b></font> <img src="https://imgur.com/7m3iIQK.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+   </tr>
+	
+	<tr>
+<td><div class='grid'>    <div class='grid-item' data-itemId='1'><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>CHRIS-AFTER-406</b></font> <img src="https://imgur.com/DzhzslS.gif" style="font-size: 1rem;"> </div><div class='item-price'>300 xats</div>      <div class='item-gradient'></div>      <h2 class='item-title'></h2>      <div class='item-quick-cart'><span class='qc-icon'></span></div>    </div></td>
+
+ 
+	
+	</tr>
+
+
+
+	   
+    </tbody>
+   </table>
+ 
+	
+        </div>
+      </section>
+
+    </div>
+   
+ 
+
+<!-- footer. -->	
+ <style>
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #34495e;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<footer>
+	
+
+<h2 style="text-align:center; font-size:120%; color:white; class="mb-5"> Todos os direitos reservados para este Tema da Galeria para (MASTERUPSSs) Não copiar sem permissão!</h2>
+<h2 style="text-align:center; font-size:120%; color:white; class="mb-5">Usar qualquer parte deste tema no seu xatspace, sem minha permissão, resultará em um RELATÓRIO para o seu xatspace!</h2>
+ <h2 style="text-align:center; font-size:120%; color:white; class="mb-5">Obrigado!</h2>
+</footer>
+	
+	
+  </body>
+  </html>
